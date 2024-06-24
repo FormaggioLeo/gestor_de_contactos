@@ -16,7 +16,7 @@ def ver_contactos(lista):
 
             favorito = '★' if listado['favorito'] == True else ' '
 
-            print(f'{indice}. [{favorito} ] Nombre: {listado['nombre']}, Teléfono: {listado['telefono']}, Correo: {listado['correo']}')
+            print(f'{indice}. [{favorito}] Nombre: {listado['nombre']}, Teléfono: {listado['telefono']}, Correo: {listado['correo']}')
     return
 
 #3 Editar un contacto:
@@ -48,8 +48,10 @@ def marcar_desmarcar_como_favorito(indice, lista):
     if indice_correcto >= 0 and indice_correcto < len(lista):
         if lista[indice_correcto]['favorito'] == False:
             lista[indice_correcto]['favorito'] = True
+            print(f'\n¡Se ha añadido el contacto [{indice}] a la lista de favoritos')
         else:
             lista[indice_correcto]['favorito'] = False
+            print(f'\n¡Se ha quitado el contacto [{indice}] de la lista de favoritos')
     else:
         print(f'\nNo se ha encontrado el contacto [{indice}].\n¡Operación cancelada!')
     return
@@ -65,7 +67,7 @@ def visualizar_favoritos(lista):
             if listado['favorito'] == True:
                 print(f'{indice}. [★] Nombre: {listado['nombre']}, Teléfono: {listado['telefono']}, Correo: {listado['correo']}')
         if not hay_favoritos:
-            print(f'¡No hay contactos marcados como favorito!\nSe puede marcar un contacto como favorito [★] desde la opción [4]')
+            print(f'¡Todavia no hay contactos marcados como favorito!\nSe puede marcar un contacto como favorito [★] desde la opción [4]')
     return
 
 #6 Eliminar contacto

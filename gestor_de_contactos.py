@@ -72,7 +72,7 @@ while True:
     #4 Marcar/desmarcar como favorito
     if eleccion == '4':
         modulos_gestor.ver_contactos(lista)
-        indice = input('Escriba el numero del contacto que deseas cambiar el status de favorito: ')
+        indice = input('\nEscriba el numero del contacto que deseas cambiar el status de favorito: ')
         modulos_gestor.marcar_desmarcar_como_favorito(indice, lista)
     
     #5 Visualizar favoritos
